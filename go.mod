@@ -7,6 +7,7 @@ toolchain go1.24.4
 require (
 	github.com/bytedance/sonic v1.14.0
 	github.com/cloudwego/eino v0.4.7
+	github.com/cloudwego/eino-examples/flow/agent/deer-go v0.0.0-20250827124704-a0e96f1391e8
 	github.com/cloudwego/eino-ext/components/document/parser/html v0.0.0-20250117061805-cd80d1780d76
 	github.com/cloudwego/eino-ext/components/document/parser/pdf v0.0.0-20250117061805-cd80d1780d76
 	github.com/cloudwego/eino-ext/components/model/ark v0.1.22
@@ -14,7 +15,6 @@ require (
 	github.com/cloudwego/eino-ext/components/model/ollama v0.1.2
 	github.com/cloudwego/eino-ext/components/model/openai v0.0.0-20250826125654-37d4a5029810
 	github.com/cloudwego/eino-ext/components/retriever/volc_vikingdb v0.0.0-20250319082935-6219ec437e56
-	github.com/cloudwego/eino-ext/components/tool/duckduckgo v0.0.0-20250902131858-bb959c912204
 	github.com/cloudwego/eino-ext/components/tool/duckduckgo/v2 v2.0.0-20250826125654-37d4a5029810
 	github.com/cloudwego/eino-ext/devops v0.1.7
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc
@@ -36,7 +36,6 @@ require (
 	github.com/bytedance/sonic/loader v0.3.0 // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/cloudwego/base64x v0.1.5 // indirect
-	github.com/cloudwego/eino-examples/flow/agent/deer-go v0.0.0-20250827124704-a0e96f1391e8 // indirect
 	github.com/cloudwego/eino-ext/callbacks/apmplus v0.0.1 // indirect
 	github.com/cloudwego/eino-ext/libs/acl/openai v0.0.0-20250826113018-8c6f6358d4bb // indirect
 	github.com/cloudwego/eino-ext/libs/acl/opentelemetry v0.0.0-20250225080340-5935633151d3 // indirect

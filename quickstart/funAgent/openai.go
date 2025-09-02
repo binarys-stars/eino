@@ -18,17 +18,29 @@ package main
 
 import (
 	"context"
+	"github.com/cloudwego/eino-examples/internal/logs"
 	"github.com/cloudwego/eino-ext/components/model/openai"
 	"github.com/cloudwego/eino/components/model"
 	"github.com/joho/godotenv"
 	"log"
 	"os"
+	"runtime"
 )
 
 func createOpenAIChatModel(ctx context.Context) model.ToolCallingChatModel {
-	err := godotenv.Load("quickstart\\funAgent\\.env")
-	if err != nil {
-		log.Printf("Error loading .env file, err=%v", err)
+	switch runtime.GOOS {
+	case "windows":
+		err := godotenv.Load("quickstart\\funAgent\\.env")
+		if err != nil {
+			log.Printf("Error loading .env file, err=%v", err)
+		}
+	case "darwin":
+		err := godotenv.Load("quickstart/funAgent/.env")
+		if err != nil {
+			log.Printf("Error loading .env file, err=%v", err)
+		}
+	default:
+		logs.Infof("unsupported platform")
 	}
 
 	key := os.Getenv("OPENAI_API_KEY")
